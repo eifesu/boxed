@@ -202,7 +202,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 						!(
 							city.length > 0 &&
 							address.length > 0 &&
-							(mobile.length > 0 || card.length > 0) &&
+							(mobile.length > 0 || card.length > 0 || method == "delivery") &&
 							cart.length > 0 &&
 							!loading
 						)
