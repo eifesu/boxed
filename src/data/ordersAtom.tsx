@@ -20,7 +20,7 @@ export const ordersAtom = atom({
 
 export const orderFilterAtom = atom({
     key: 'OrderFilter',
-    default: "all",
+    default: "pending",
 })
 
 export const filteredOrdersList = selector({
