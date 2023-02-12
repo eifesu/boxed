@@ -116,7 +116,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 
 				{/* Total */}
 
-				<div className=" flex h-10 w-full items-center justify-between rounded-md bg-primary p-4 text-sm font-semibold text-white ">
+				<div className=" flex h-10 w-full items-center justify-between rounded-md bg-primary p-4 text-sm font-semibold text-[white] ">
 					<p>Total</p>
 					<p>{total} XOF</p>
 				</div>
@@ -165,7 +165,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 							Debit Card
 						</option>
 						<option value="mobile">Mobile Money</option>
-						<option value="delivery">At pickup</option>
+						{total >= 1000 ? <option value="delivery">At pickup</option> : null}
 					</select>
 				</div>
 
@@ -207,7 +207,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 							!loading
 						)
 					}
-					className={` text-md flex  min-h-[2.5rem] w-full items-center justify-center gap-2 self-end rounded-md bg-primary font-bold text-white transition-[1s] disabled:bg-gray disabled:text-black`}>
+					className={` text-md flex  min-h-[2.5rem] w-full items-center justify-center gap-2 self-end rounded-md bg-primary font-bold text-[white] transition-[1s] disabled:bg-gray disabled:text-black`}>
 					{!loading ? (
 						<>
 							<p>Order</p>

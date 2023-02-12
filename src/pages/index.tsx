@@ -18,7 +18,7 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<div className="flex flex-1 flex-col items-center justify-start gap-8 p-6 text-white">
+			<div className="flex flex-1 flex-col items-center justify-start gap-8 p-6 text-gray-dark">
 				<button
 					className="flex h-28 w-full max-w-xl select-none items-center justify-center gap-8 rounded-xl border border-gray bg-black text-start active:bg-gray "
 					onClick={() => router.push("/home")}>

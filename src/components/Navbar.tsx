@@ -13,7 +13,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = (props) => {
     <>
       {/* Left Content */}
       {router.pathname === "/" && (
-        <nav className="text-white h-24 bg-black border-b border-b-gray flex justify-around items-center">
+        <nav className="text-gray-dark h-24 bg-black border-b border-b-gray flex justify-around items-center">
           <div className="flex flex-col items-center">
             <p className="font-bold text-xl">Authentication</p>
             <p className="text-xs text-center">

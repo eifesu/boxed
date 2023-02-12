@@ -98,7 +98,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 
 				{/* Add to menu */}
 				<button
-					className={`flex min-h-[2.5rem] w-full items-center justify-center gap-3 rounded-md bg-primary text-xs font-bold text-white`}
+					className={`flex min-h-[2.5rem] w-full items-center justify-center gap-3 rounded-md bg-primary text-xs font-bold text-[white]`}
 					onClick={() => router.push("edit")}>
 					<p>Add to Menu</p>
 					<BsFillPlusCircleFill className="" />
@@ -133,13 +133,13 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 											"/edit"
 										)
 									}
-									className={`flex  h-10 flex-1 items-center justify-center gap-2 rounded-md bg-primary text-xs font-bold text-white transition-[1s]`}>
+									className={`flex  h-10 flex-1 items-center justify-center gap-2 rounded-md bg-primary text-xs font-bold text-[white] transition-[1s]`}>
 									<p>Edit</p>
 									<BsPencilSquare className="text-[10px]" />
 								</button>
 								<button
 									onClick={() => handleDeleteMeal(meal.id)}
-									className={`flex  h-10 w-10 items-center justify-center gap-2 rounded-md bg-red text-xs font-bold text-white transition-[1s]`}>
+									className={`flex  h-10 w-10 items-center justify-center gap-2 rounded-md bg-red text-xs font-bold text-[white] transition-[1s]`}>
 									{!loading ? (
 										<>
 											<BsFillTrash2Fill className="text-xs" />

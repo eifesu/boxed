@@ -156,7 +156,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 					className="h-64 w-full bg-cover bg-center"
 				/>
 
-				<label className="flex min-h-[40px] w-full items-center justify-center gap-4 rounded-md border border-gray bg-primary px-4 text-sm font-bold text-white">
+				<label className="flex min-h-[40px] w-full items-center justify-center gap-4 rounded-md border border-gray bg-primary px-4 text-sm font-bold text-[white]">
 					<p>Pick an image</p>
 					<input
 						name="name"
@@ -242,7 +242,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 							!loading
 						)
 					}
-					className={` text-md flex  min-h-[2.5rem] w-full items-center justify-center gap-2 self-end rounded-md bg-primary font-bold text-white transition-[1s] disabled:bg-gray disabled:text-black`}>
+					className={` text-md flex  min-h-[2.5rem] w-full items-center justify-center gap-2 self-end rounded-md bg-primary font-bold text-[white] transition-[1s] disabled:bg-gray disabled:text-black`}>
 					{!loading ? (
 						<>
 							<p>Save changes</p>

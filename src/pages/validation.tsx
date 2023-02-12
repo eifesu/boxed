@@ -36,33 +36,36 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 	}
 
 	function handleAcceptOrder(id: string) {
-        setLoading(true)
+		setLoading(true);
 		const docRef = doc(db, "orders", id);
 		setDoc(docRef, { status: "Accepted" }, { merge: true }).then(
 			(response) => {
-                setLoading(false)
-                fetchOrders()}
+				setLoading(false);
+				fetchOrders();
+			}
 		);
 	}
 
 	function handleDeclineOrder(id: string) {
-        setLoading(true)
+		setLoading(true);
 		const message = prompt("Enter reason for rejection")?.trim();
 		const docRef = doc(db, "orders", id);
 		setDoc(docRef, { status: "Rejected", message }, { merge: true }).then(
 			(response) => {
-                setLoading(false)
-                fetchOrders()}
+				setLoading(false);
+				fetchOrders();
+			}
 		);
 	}
 
 	function handleDeliverOrder(id: string) {
-        setLoading(true)
+		setLoading(true);
 		const docRef = doc(db, "orders", id);
 		setDoc(docRef, { status: "Delivered" }, { merge: true }).then(
 			(response) => {
-                setLoading(false)
-                fetchOrders()}
+				setLoading(false);
+				fetchOrders();
+			}
 		);
 	}
 
@@ -87,7 +90,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 							filter === "pending" ? "primary" : "black"
 						} h-10 w-32 rounded-md transition-[1s] ${
 							filter !== "pending" && "border border-gray"
-						} flex items-center justify-center gap-3 text-xs font-bold text-white`}
+						} flex items-center justify-center gap-3 text-xs font-bold text-[white]`}
 						onClick={() => setFilter("pending")}>
 						<BsClockFill className="text-xs" />
 						<p>Pending</p>
@@ -97,7 +100,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 							filter === "all" ? "primary" : "black"
 						} h-10 w-32 transition-[1s] ${
 							filter !== "all" && "border border-gray"
-						} flex items-center justify-center gap-3 rounded-md text-xs font-bold text-white`}
+						} flex items-center justify-center gap-3 rounded-md text-xs font-bold text-[white]`}
 						onClick={() => setFilter("all")}>
 						<BsCashStack className="" />
 						<p>All orders</p>
@@ -114,9 +117,9 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 						case "Rejected":
 							color = "text-red";
 							break;
-                        case "Delivered":
-                            color = "text-green-700";
-                            break;
+						case "Delivered":
+							color = "text-green-700";
+							break;
 						default:
 							break;
 					}
@@ -186,7 +189,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 											onClick={() =>
 												handleAcceptOrder(order.id)
 											}
-											className="flex h-8 w-full items-center justify-center gap-2 rounded-md bg-primary text-xs text-white disabled:border disabled:border-gray disabled:bg-black disabled:text-black">
+											className="flex h-8 w-full items-center justify-center gap-2 rounded-md bg-primary text-xs text-[white] disabled:border disabled:border-gray disabled:bg-black disabled:text-black">
 											{!loading ? (
 												<>
 													<p>Take</p>
@@ -205,7 +208,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 											onClick={() =>
 												handleDeclineOrder(order.id)
 											}
-											className="flex h-8 w-full items-center justify-center gap-2 rounded-md bg-red text-xs text-white disabled:border disabled:border-gray disabled:bg-black disabled:text-black">
+											className="flex h-8 w-full items-center justify-center gap-2 rounded-md bg-red text-xs text-[white] disabled:border disabled:border-gray disabled:bg-black disabled:text-black">
 											{!loading ? (
 												<>
 													<p>Decline</p>
@@ -227,7 +230,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 											onClick={() =>
 												handleDeliverOrder(order.id)
 											}
-											className="flex h-8 w-full items-center justify-center gap-2 rounded-md bg-green-700 text-xs text-white disabled:border disabled:border-gray disabled:bg-black disabled:text-black">
+											className="flex h-8 w-full items-center justify-center gap-2 rounded-md bg-green-700 text-xs text-[white] disabled:border disabled:border-gray disabled:bg-black disabled:text-black">
 											{!loading ? (
 												<>
 													<p>Deliver</p>
@@ -246,7 +249,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 											onClick={() =>
 												handleDeclineOrder(order.id)
 											}
-											className="flex h-8 w-full items-center justify-center gap-2 rounded-md bg-red text-xs text-white disabled:border disabled:border-gray disabled:bg-black disabled:text-black">
+											className="flex h-8 w-full items-center justify-center gap-2 rounded-md bg-red text-xs text-[white] disabled:border disabled:border-gray disabled:bg-black disabled:text-black">
 											{!loading ? (
 												<>
 													<p>Cancel</p>

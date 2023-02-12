@@ -18,7 +18,6 @@ interface IAppProps {}
 
 const App: React.FunctionComponent<IAppProps> = (props) => {
 	const [search, setSearch] = useState("");
-
 	const [filter, setFilter] = useRecoilState(mealFilterAtom);
 	const [meals, setMeals] = useRecoilState(mealsAtom);
 	const [cart, setCart] = useRecoilState(cartAtom);
@@ -88,7 +87,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 							filter === "price" ? "primary" : "black"
 						} h-8 w-24 transition-[1s] ${
 							filter !== "price" && "border border-gray"
-						} flex items-center justify-center gap-3 rounded-md text-xs font-semibold text-white`}
+						} flex items-center justify-center gap-3 rounded-md text-xs font-semibold text-[white]`}
 						onClick={() => setFilter("price")}>
 						<BsCashStack className="" />
 						<p>Price</p>
@@ -98,7 +97,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 							filter === "time" ? "primary" : "black"
 						} h-8 w-24 rounded-md transition-[1s] ${
 							filter !== "time" && "border border-gray"
-						} flex items-center justify-center gap-3 text-xs font-semibold text-white`}
+						} flex items-center justify-center gap-3 text-xs font-semibold text-[white]`}
 						onClick={() => setFilter("time")}>
 						<BsClockFill className="text-xs" />
 						<p>Time</p>
@@ -142,7 +141,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
 									onClick={() =>
 										setCart((prev) => [...prev, meal])
 									}
-									className={`flex h-8 w-full items-center justify-center gap-2 rounded-md bg-primary text-xs font-bold text-white transition-[1s]`}>
+									className={`flex h-8 w-full items-center justify-center gap-2 rounded-md bg-primary text-xs font-bold text-[white] transition-[1s]`}>
 									<p>Add to Cart</p>
 									<BsFillCartPlusFill className="text-xs" />
 								</button>
